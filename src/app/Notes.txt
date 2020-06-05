@@ -22,3 +22,8 @@ So to create new component always use ng generate component ad-component command
 It sets up all the required files along with setup code. This is really awesome. And it adds this new component to modules as well.  We can define template i.e. CSS or HTML in decorator itself, as strings or ``. 
 Don't use it though. If you use it, change templateUrl and StyleUrl to template and style. 
 Templates has to be present though, style can be missing. 
+
+Selectors can be replaced with attributes or CSS type class reference, where while using you treat them as CSS classes, bad practice though. So stick with selectors. 
+
+1. MileStone 1: Create a small components, one Warning or Error Alert, This will eventually convert into toasters.
+Problem: Don't know what to do with enum file where type of Alert is defined. How to import and declare it.  Also input passing to component was not working precisely.
