@@ -1,0 +1,10 @@
+1. So in file Angular.json we added bootstrap and check all csss files imported in head element on inspection.
+2. iNDEX.HTML IS SERVED by server. which includes <app-root. component and that how our application starts.
+3. @Component is called decorator. 
+4. There will scripts imported if you inspect your page, those scripts are substitied by gn-serve and includes our code as well. 
+Our code gets triggered from main.ts onwards. this bootstraps our main app.module.ts which in turn provides way for our components to be executed.
+In there is a list of bootstrap components which are then to be analyzed while initial serving of index.html.
+
+Thhus angular gets starts main.ts which bootstarps our application (which is a module: module.ts, and is passed as argument) and withing this module
+ we bootstrap our component that angular should know. Which this main component, we have our main selector which is used in index.html. 
+  
