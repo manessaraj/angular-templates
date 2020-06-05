@@ -27,3 +27,34 @@ Selectors can be replaced with attributes or CSS type class reference, where whi
 
 1. MileStone 1: Create a small components, one Warning or Error Alert, This will eventually convert into toasters.
 Problem: Don't know what to do with enum file where type of Alert is defined. How to import and declare it.  Also input passing to component was not working precisely.
+
+
+DataBinding == Communication 
+
+TS ------------> html
+{{data}}, [data] = ""          ----------(1), 
+
+
+TS <------------ HTML
+Event Binding (event)="expression"   ----------(2), 
+
+
+Two way Binding
+TS <------------> HTML
+[(ngModel)] = "data"           ----------(3), 
+
+
+In (1) this should evaluate to a string, else won't work. It is called string interpolation. , i.e. {{ }}
+Similarly, [data] = "someProperty", this is called property Binding. 
+
+So for property binding or event biniding in (2), always read mozilla's developer guide after googling HTML_property events or perperties. 
+The data emitted by any DOM element can be passed to process to your function. This data is passes with $event variable, its a reserved variable. 
+so (click)="onClick($event)" includes all the data emitted by this click event. $ means reserved. 
+
+
+What are directives?
+Directives are instructions in the DOM! like selector of our components. Decorator used is @Decorator. ngIf is a directive too! 
+<p *ngIf="something">...</p> ---- The * is required because ngIf is a structural directive, which means it will change the structure of DOM.
+ Angular will create a hook as comments in the section, where it will insert the element on expression `something` going true. 
+ This element is added or removed, it is not hidden or anything. 
+ 

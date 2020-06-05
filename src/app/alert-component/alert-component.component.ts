@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlertComponentComponent implements OnInit {
   // @Input() public alertType: AlertType = AlertType.INFO;
-  // @Input() public textMessage: string = "";
+  @Input() public textMessage: string = "";
 
 
   constructor() { }
@@ -16,7 +16,7 @@ export class AlertComponentComponent implements OnInit {
   }
 
   public getTextToDistplay():string {
-    return "SUCCESS!";
+    return this.textMessage;
   }
 
 }
