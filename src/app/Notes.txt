@@ -6,5 +6,19 @@ Our code gets triggered from main.ts onwards. this bootstraps our main app.modul
 In there is a list of bootstrap components which are then to be analyzed while initial serving of index.html.
 
 Thhus angular gets starts main.ts which bootstarps our application (which is a module: module.ts, and is passed as argument) and withing this module
- we bootstrap our component that angular should know. Which this main component, we have our main selector which is used in index.html. 
-  
+ we bootstrap our component that angular should know. within  this main component, we have our main selector which is used in index.html. 
+
+
+Components are main building blocks.   With in each component we can nest another component (in html) file, hence whole thing is heirarchical. decorator @Component 
+is used to provide meta information about componet/class to angualr on how to use it. Each component and all its files declared in this metadata are bundled together by webpack and then servered together.
+
+
+App.module or similar files bundles bundles of components into packages. 
+So after defining component, we need to declare it in module file, so that in can be included in package. 
+Each time you use a selector of a component a corresponding instance is used. 
+
+
+So to create new component always use ng generate component ad-component command. 
+It sets up all the required files along with setup code. This is really awesome. And it adds this new component to modules as well.  We can define template i.e. CSS or HTML in decorator itself, as strings or ``. 
+Don't use it though. If you use it, change templateUrl and StyleUrl to template and style. 
+Templates has to be present though, style can be missing. 
